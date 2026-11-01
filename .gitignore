@@ -1,0 +1,16 @@
+__pycache__/
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+*.log
+
+# outputs of the experiments
+experiments/**/results/
+experiments/**/*.pdf
+experiments/**/*.png
+
+# downloaded or exported data
+experiments/ar_order/data/
+experiments/intermittent/data/*.csv
+experiments/intermittent/data/*.tsf
+experiments/intermittent/data/fable.intermittent/

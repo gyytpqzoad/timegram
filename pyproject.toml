@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "timegram"
+version = "0.1.0"
+description = "A grammar for constructing and exploring forecasting worlds"
+requires-python = ">=3.11"
+license = {text = "GPL-3.0-or-later"}
+dependencies = ["numpy", "torch", "pandas", "scipy"]
+
+[project.optional-dependencies]
+data = ["fcompdata"]
+dev = ["pytest", "nbformat", "matplotlib"]
+validation = ["statsmodels", "arch>=8,<9"]
+experiments = ["fcompdata", "matplotlib", "statsforecast", "chronos-forecasting", "rdata"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+markers = ["recovery: long-series recovery against independent estimators (statsmodels, arch); run with -m recovery"]
+addopts = "-m 'not recovery'"

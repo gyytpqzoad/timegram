@@ -1,0 +1,29 @@
+{
+ "lengths": [
+  24,
+  96
+ ],
+ "budget": 81920000,
+ "batch_size": 4096,
+ "chunk": 16384,
+ "net": {
+  "family": "resmlp",
+  "width": 256,
+  "depth": 4,
+  "expansion": 2,
+  "dropout": 0.0
+ },
+ "optimizer": {
+  "family": "adamw",
+  "lr": 0.001,
+  "weight_decay": 0.01
+ },
+ "warmup": 4096000,
+ "grad_clip": 1.0,
+ "target_clip": 10.0,
+ "loss_clip": 5.0,
+ "seed": 0,
+ "reuse": 1,
+ "ema": 0.0,
+ "replicates": 32
+}

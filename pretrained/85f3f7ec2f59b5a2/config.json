@@ -1,0 +1,30 @@
+{
+ "lengths": [
+  7,
+  128
+ ],
+ "budget": 150000000,
+ "batch_size": 2048,
+ "chunk": 16384,
+ "net": {
+  "family": "resmlp",
+  "width": 384,
+  "depth": 4,
+  "expansion": 2,
+  "dropout": 0.0
+ },
+ "optimizer": {
+  "family": "muon_adamw",
+  "lr": 0.001,
+  "muon_lr": 0.01,
+  "momentum": 0.95,
+  "weight_decay": 0.01
+ },
+ "warmup": 1000000,
+ "grad_clip": 1.0,
+ "target_clip": 10.0,
+ "loss_clip": 5.0,
+ "seed": 0,
+ "reuse": 1,
+ "ema": 0.0
+}
